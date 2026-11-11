@@ -1,0 +1,26 @@
+/* Mise en Scène site: the app's tokens (docs/DESIGN.md). Dark by default, light when the system asks. */
+:root {
+  --bg: #0e0d0c; --surface: #1a1816; --border: #34302b;
+  --text: #f3eee6; --text2: #b3aa9f; --text3: #958d83; --accent: #e3ae57;
+  color-scheme: dark light;
+}
+@media (prefers-color-scheme: light) {
+  :root { --bg: #f6f2ea; --surface: #ffffff; --border: #ddd5c8;
+    --text: #1b1814; --text2: #5c554d; --text3: #6f675e; --accent: #8f5f0f; }
+}
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--bg); color: var(--text);
+  font: 17px/1.55 -apple-system, BlinkMacSystemFont, "SF Pro Text", "Helvetica Neue", Arial, sans-serif; }
+main { max-width: 680px; margin: 0 auto; padding: 48px 16px 64px; }
+.eyebrow { color: var(--accent); font-size: 13px; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; margin: 0 0 8px; }
+h1, h2 { font-family: "Fraunces", Georgia, serif; font-weight: 600; line-height: 1.2; }
+h1 { font-size: 40px; margin: 0 0 8px; }
+h2 { font-size: 22px; margin: 40px 0 8px; }
+p, li { color: var(--text); }
+.lead { color: var(--text2); font-size: 19px; margin-top: 0; }
+.meta, footer { color: var(--text3); font-size: 14px; }
+a { color: var(--accent); text-underline-offset: 3px; }
+.card { background: var(--surface); border: 1px solid var(--border); border-radius: 16px; padding: 16px 20px; margin: 24px 0; }
+.card p:first-child { margin-top: 0; } .card p:last-child { margin-bottom: 0; }
+nav { display: flex; gap: 20px; flex-wrap: wrap; margin-bottom: 40px; font-size: 15px; }
+footer { border-top: 1px solid var(--border); margin-top: 56px; padding-top: 16px; }
